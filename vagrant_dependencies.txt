@@ -1,0 +1,38 @@
+# We can't have nice things but this should be part of VagrantFile
+# It includes all the steps to set up your vagrant environment.
+
+# Get Git
+sudo apt-get install git
+
+# Get the repository for GameFace
+git clone https://github.com/StittsAhCuda/GameFace.git
+
+# Install pip
+sudo apt-get install python-pip
+
+# Install make
+sudo apt-get install make
+
+# Let's get python 2.7.6
+wget http://www.python.org/ftp/python/2.7.6/Python-2.7.6.tgz
+tar -zxvf Python-2.7.6.tgz
+cd Python-2.7.6
+./configure
+make
+sudo make altinstall
+
+# Get virtualenvwrapper
+pip install virtualenvwrapper
+
+# Set up the bash file for virtualenvwrapper
+. ~/.bashrc
+vi ~/.bashrc
+
+
+
+
+
+
+
+
+     
